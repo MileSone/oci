@@ -82,12 +82,12 @@ def handler(ctx, data: io.BytesIO=None):
     object_name = bucket_name = namespace = ordsbaseurl = schema = dbuser = dbpwd = ""
     try:
         cfg = ctx.Config()
-        input_bucket = cfg["input-bucket"]
-        processed_bucket = cfg["processed-bucket"]
-        ordsbaseurl = cfg["ords-base-url"]
-        schema = cfg["db-schema"]
-        dbuser = cfg["db-user"]
-        dbpwd = cfg["dbpwd-cipher"]
+        input_bucket = cfg["inputbucket"]
+        processed_bucket = cfg["processedbucket"]
+        ordsbaseurl = cfg["ordsbaseurl"]
+        schema = cfg["dbschema"]
+        dbuser = cfg["dbuser"]
+        dbpwd = cfg["dbpwdcipher"]
     except Exception as e:
         print('Missing function parameters: bucket_name, ordsbaseurl, schema, dbuser, dbpwd', flush=True)
         raise
